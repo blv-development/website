@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid bg-dark text-light py-5">
+  <div class="container text-center">
+    <h1 class="display-4 fw-bold">Welcome to the BLV Developers community!</h1>
+    <p class="lead mt-3 mb-4">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+    </p>
+    <a href="{% url 'devs_list' %}" class="btn btn-primary btn-lg">
+      Meet Our Developers
+    </a>
+  </div>
+</div>
+
+    <div class="container my-5">
+        <h1 class="mb-4">Get in Touch</h1>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Hiring Managers</h5>
+                        <p class="card-text mt-2">Are you a hiring manager and want to interact with the BLV developers community? Join us in our monthly meetup to interact with the community and learn from BLV developers themselves.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">Register for Meet</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Colleagues and Managers of BLV Developers</h5>
+                        <p class="card-text mt-2">Do you have experience working with BLV developers? Share your experience with the world.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#endorsementModal">Share your Experience</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">BLV Developers</h5>
+                        <p class="card-text mt-2">Are you a BLV developer or student who wants to join our community forum? Apply to join our community</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#joinModal">Join the Community</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Monthly Call Registration for Hiring Managers</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form onsubmit="event.preventDefault(); submitModalForm('register')">
+        <div class="mb-3"><input class="form-control" name="name" placeholder="Name" required></div>
+        <div class="mb-3"><input class="form-control" name="email" type="email" placeholder="Email" required></div>
+        <div class="mb-3"><input class="form-control" name="contact" placeholder="Contact Number" required></div>
+        <div class="mb-3"><input class="form-control" name="linkedin" placeholder="LinkedIn Profile (optional)"></div>
+        <div class="modal-footer">
+        </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" onclick="submitModalForm('register')">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="endorsementModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Share your Experience</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form onsubmit="event.preventDefault(); submitModalForm('endorsement')">
+        <div class="mb-3"><input class="form-control" name="name" placeholder="Name" required></div>
+        <div class="mb-3"><input class="form-control" name="email" type="email" placeholder="Email" required></div>
+        <div class="mb-3"><input class="form-control" name="contact" placeholder="Contact Number" required></div>
+        <div class="mb-3"><input class="form-control" name="linkedin" placeholder="LinkedIn Profile (optional)"></div>
+        <div class="mb-3"><input class="form-control" name="dev" placeholder="Who is the BLV dev you worked with?" required></div>
+        <div class="mb-3"><textarea class="form-control" name="experience" placeholder="Describe your experience" required></textarea></div>
+        <div class="modal-footer">
+        </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" onclick="submitModalForm('endorsement')">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="joinModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Monthly Call Registration for Hiring Managers</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form onsubmit="event.preventDefault(); submitModalForm('join')">
+        <div class="mb-3"><input class="form-control" name="name" placeholder="Name" required></div>
+        <div class="mb-3"><input class="form-control" name="email" type="email" placeholder="Email" required></div>
+        <div class="mb-3"><input class="form-control" name="contact" placeholder="Contact Number" required></div>
+        <div class="mb-3"><input class="form-control" name="linkedin" placeholder="LinkedIn Profile (optional)"></div>
+        <div class="modal-footer">
+        </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" onclick="submitModalForm('join')">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

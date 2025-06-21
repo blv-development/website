@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Visionaries{% endblock %}
+
+{% block content %}
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    tr {
+      display: flex;
+      justify-content: space-between;
+      padding: 1em;
+      border-bottom: 1px solid #ddd;
+    }
+    td {
+      flex: 1;
+      padding: 0.5em;
+    }
+    .name {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    .bio {
+      color: gray;
+    }
+    .linkedin img {
+      width: 24px;
+      height: 24px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Meet the Developers</h1>
+  <table>
+    {% for dev in developers %}
+      <tr>
+        <td>
+          <div class="name">{{ dev.name }}</div>
+          <div class="bio">{{ dev.bio }}</div>
+        </td>
+        <td>
+          <div class="company">{{ dev.company }}</div>
+        </td>
+        <td class="linkedin">
+          <a href="{{ dev.linkedin_url }}" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+          </a>
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Endorsements{% endblock %}
+
+{% block content %}
+    <style>
+        .card {
+            position: relative;
+        }
+        .linkedin-button {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+        }
+        .linkedin-icon {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+        }
+    </style>
+
+    <div class="container my-5">
+        <h1 class="mb-4">Endoresements</h1>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            {% for endorsement in endorsements %}
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">{{ endorsement.name }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ endorsement.role }}</h6>
+                        <p class="card-text mt-2">{{ endorsement.testimonial }}</p>
+                        <a href="{{ endorsement.linkedin_url }}" class="btn btn-outline-primary mt-auto linkedin-button" target="_blank" rel="noopener noreferrer">
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
