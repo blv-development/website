@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-hrdm_4ob_f%5hv*y(kky18j)mmfkuyff(tlf&f!cy4tvp_&+fu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['jelsoft-strictly-package-encountered.trycloudflare.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -138,8 +138,3 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'development@blvdevelopers.org'
 EMAIL_HOST_PASSWORD = 'Development@2025'
 DEFAULT_FROM_EMAIL = 'BLV Developers <development@blvdevelopers.org>'
-
-
-CSRF_TRUSTED_ORIGINS = [
-    'https://jelsoft-strictly-package-encountered.trycloudflare.com',
-]

@@ -10,19 +10,31 @@
     <p class="lead mt-3 mb-4">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
     </p>
-    <a href="{% url 'devs_list' %}" class="btn btn-primary btn-lg">
-      Meet Our Developers
+    <a href="{% url "about" %}" class="btn btn-primary btn-lg">
+      Learn More about our Community
     </a>
   </div>
 </div>
 
+  <div class="card bg-dark text-light border-secondary mb-4">
+    <div class="card-body">
+      <h4 class="card-title">Meet our Developers</h4>
+      <p class="card-text">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla sint incidunt aperiam optio reiciendis numquam placeat odit, facilis nostrum. Accusantium dolor officiis nobis accusamus maxime dignissimos distinctio quibusdam sapiente, voluptatem, laboriosam dolores in dolore id tenetur unde numquam voluptatum ab? Aliquid, maxime. Neque cupiditate sed dolor quia rerum quos nemo repudiandae molestias fuga magni fugit labore eaque sit voluptate, accusantium incidunt corrupti ipsa aut exercitationem esse eius voluptates inventore. Aliquam.
+      </p>
+      <a href="{% url "about" %}" class="btn btn-primary btn-lg">
+      Learn More about our Community
+      </a>
+    </div>
+  </div>
+
     <div class="container my-5">
-        <h1 class="mb-4">Get in Touch</h1>
+        <h2 class="mb-4">Get in Touch</h2>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
             <div class="col">
                 <div class="card h-100 shadow-sm">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Hiring Managers</h5>
+                        <h3 class="card-title">Hiring Managers</h3>
                         <p class="card-text mt-2">Are you a hiring manager and want to interact with the BLV developers community? Join us in our monthly meetup to interact with the community and learn from BLV developers themselves.</p>
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">Register for Meet</button>
                     </div>
@@ -31,7 +43,7 @@
             <div class="col">
                 <div class="card h-100 shadow-sm">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Colleagues and Managers of BLV Developers</h5>
+                        <h3 class="card-title">Colleagues and Managers of BLV Developers</h3>
                         <p class="card-text mt-2">Do you have experience working with BLV developers? Share your experience with the world.</p>
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#endorsementModal">Share your Experience</button>
                     </div>
@@ -40,7 +52,7 @@
             <div class="col">
                 <div class="card h-100 shadow-sm">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">BLV Developers</h5>
+                        <h3 class="card-title">BLV Developers</h3>
                         <p class="card-text mt-2">Are you a BLV developer or student who wants to join our community forum? Apply to join our community</p>
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#joinModal">Join the Community</button>
                     </div>
