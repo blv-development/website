@@ -23,7 +23,7 @@ We've chosen a modern, robust, and scalable tech stack. This allows us to build 
 
 ## Getting Started: Running Locally
 
-Thanks to Docker, getting a full local development environment running is straightforward. You won't need to install Python, Node, or PostgreSQL on your machine directly—Docker handles it all.
+Thanks to Docker, getting a full local development environment running is straightforward. You won't need to install Python, Node, or PostgreSQL on your machine directly Docker handles it all.
 
 ### Prerequisites
 
