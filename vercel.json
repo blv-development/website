@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "buildCommand": "bash setup.sh",
+  "builds": [
+    {
+      "src": "blvd/blvd/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "blvd/blvd/wsgi.py"
+    }
+  ]
+}
